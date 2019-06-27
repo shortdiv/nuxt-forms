@@ -3,31 +3,20 @@
     <v-flex text-xs-center>
       <v-form ref="form" name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="contact" value="contact-form">
-        <v-text-field
-          v-model="name"
-          name="name"
-          label="Your Name"
-          type="text"
-        />
-        <v-text-field
-          v-model="email"
-          name="email"
-          label="Your Email"
-          type="email"
-        />
-        <v-select
-          :items="items"
-          name="role"
-          label="Your Role"
-        />
-        <v-text-field
-          v-model="message"
-          name="message"
-          label="message"
-        />
-        <v-btn type="submit">
-          submit
-        </v-btn>
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" v-model="name">
+        <label for="name">Your Email:</label>
+        <input type="email" name="email" v-model="email">
+        <label for="role">Your Role</label>
+        <select name="role" id="">
+          <option value="leader">Leader</option>
+          <option value="follower">Follower</option>
+        </select>
+        <label for="message">Message:</label>
+        <input type="text" name="message" v-model="message">
+        <button type="submit" class="v-btn theme--dark">
+          Submit
+        </button>
       </v-form>
     </v-flex>
   </v-layout>
